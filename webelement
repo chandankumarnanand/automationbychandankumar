@@ -1,0 +1,158 @@
+webelement interface---it is an interface of slenium arcticter which 14 abstract method to perform action on any web element or to  retrive information from any web elment 
+
+
+what is web element---any thing present on the web page is called as webelement 
+ex--textfield ,radio button cheak box ,button ,normal text,link text,
+
+1 click
+2 send key
+get text 
+clear
+iselable 
+is select
+is display
+get atribute 
+getcssvalue
+get tag name
+get size
+get location 
+get rect
+sumbit
+
+
+
+1)click---this method is used to scrooll and click on any web element 
+the retun type is void
+it takes no argument
+
+
+2)send keys(charseq...)--this method is used to enter any value to a text fithe eld
+this mehod is also used to keyboard simulation on any textfield 
+ex--pressing enter button 
+pressing control c
+pressing control v etc
+
+the return type is void 
+it takes char seq var args type of argument
+
+char seq---it is interface which is implemented in all string related classes 
+
+charseq........string
+       .......stringbuffer
+       .......string builder
+       
+3)get text it is amethod which is used to retrive any text from the web page for verification 
+its return type string 
+its take no argument
+cleaer---it is method to clear a text field before passing new value
+the return type is void
+takes no argument 
+
+
+is enabled ---is method is used to verify whter any web element is enabled or disabled 
+the return type is boolean 
+if the element is elabeld the method returns true or else false
+it takes no argument 
+
+is dispaly---is method is used to verify whther an element is dispalying or not 
+the return type is boolean
+if the element is dispalying the method returns true or else false
+if the element is dispalying the method returns true or else false
+it takes no argument
+
+is selected ---this method is used to verify whter a cheak box or a radio button is slected or not 
+return type is boolean 
+if the element is selected the method returns true or else false
+it takes no argument
+
+
+
+
+ getrect()---
+ ***************ToVerifySpaces**********************
+ package webelement;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
+import org.openqa.selenium.Rectangle;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class TVerifySpaces {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		WebDriver driver=new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("http://demoapps.qspiders.com/");
+	 Rectangle namerect = driver.findElement(By.id("name")).getRect();
+		int nameheight = namerect.getHeight();
+		int namestarty = namerect.getY();
+	int	nameendy= nameheight+namestarty ;
+		
+	 Rectangle emailrect = driver.findElement(By.name("email")).getRect();
+		int emailheight = emailrect.getHeight();
+		int emailstarty = emailrect.getY();
+		
+		int spacebetweennameandemail= emailstarty-nameendy;
+		System.out.println("the space b/w name and email :"+spacebetweennameandemail);
+		
+		int emailendy = emailstarty+emailheight;
+		
+		
+		
+		Rectangle passrect = driver.findElement(By.name("password")).getRect();
+		int passht = passrect.getHeight();
+		int passstarty = passrect.getY();
+		
+		
+		
+	int spacebetweenemailandpassword=passstarty-emailendy;
+	
+	if(spacebetweenemailandpassword==spacebetweennameandemail) {
+		System.out.println("pass:the space is verified");
+	}
+	
+	else
+		System.out.println("fail:the space is not verified");
+		
+		
+		
+		
+		
+		
+		
+		
+
+	}
+
+}
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+

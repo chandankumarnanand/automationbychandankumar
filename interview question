@@ -1,0 +1,41 @@
+*******************Interview question******************
+1)how to take sceern shot 
+1.downcasting the takescreenshot and store a variable 
+2.with the refence of variable call getScreenshotAs method and store source 
+3.create file object and pass file path and store desittion 
+4.using file refence and call copy method and pass source ,destiny
+
+
+what is use java excuter in slenium
+--when th
+
+
+
+
+
+
+
+
+how to handel ajax call in java script
+using 1.implicit wait
+2.explicit wait 
+3.fluent wait 
+
+
+fluent wait---is a inttelligent wait in slenium webdriver by which we can
+1.modify the polling period 
+2.wait for any condition to be satisfied 
+3.ignore any exception while creating 
+
+note----fluent wait through time out exception if total duration is over or the condition not satisfied
+
+which method is overloaded in slenium class
+1)action class,slect class,fluent wait
+
+
+where we use downcasting in slenium
+javascript excuture,takescreenshot
+
+
+
+ 

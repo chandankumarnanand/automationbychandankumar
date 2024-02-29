@@ -1,0 +1,215 @@
+popuos:-----are gui window which overs either on the top of the browser windiow or on the web page .it may give the user valuable information 
+or take valuable information from the user .
+
+
+****************types 
+
+java script popup:----
+
+1)alert 
+2)conformation
+3)propmt popup
+
+
+
+2)hidden division popup
+3)chlid browser popup
+4)notification popup 
+5)file upload popup
+6)file daunload popup
+7)authonication popoup
+8)print popup
+
+
+
+
+****************how to handel popup 
+
+
+to handel a popup
+1) first insect popup whter it is inspectable or not 
+if the popup insscpectable use find element method to laocate popup and use web element interface method to handel it
+if the popup is not inscepectable see wether silenum labrariry method are there are not .if it is there use it 
+if slenum libariry method are not there use robot class or aotoit 
+ autoit:----it is an automation tool which is used to automate the gui level popups during automation . this toll can automate stand alone appllication .
+ we write scripting langugage while using autoit
+ 
+ 
+ ques---what happen if popup are not handel 
+ if java script popup is not handel we get unhandelalertexception.if other popups are not hanled the script will not give expected output
+ or we can say the script will not behave accornig to the manual test cases 
+ 
+ how to install autoit 
+ type autoit in google and search click on the official of autoit and dounload the application
+ extract the dounloaded file 
+ install the setup file
+ (keep everything defult click next multiple type and install
+ 
+ go to c- drive programfile(86) go to autoit(3) go to scite folder double click on  scite application 
+ 
+ scite editior will open write the scripting lang on the editor save and compile 
+ 
+ 
+ no such alert exceptiuon :--- this is uncheked expection of slenium which occurs  when we ARE TRY TO HANDEL a java script popup which is not present 
+ 
+ 
+ *********how to handel the following popup 
+ 
+ 1)java scriptpopup:---it is a popup which occur on the top of the browser widow it can be of therree type
+ 
+ 
+1)alert:--if the java script popup has ok butoon only it is called as alert popup 
+ 
+2)conformation:---if the java script popup has both ok and cancel button is called as conformetion popup
+3)propmt popup:-----it is a java script popup which has a text field alanog with ok and cancel button
+
+
+this popup is develop using java script language that while it is called java script popup
+
+
+this popup is not inscepetable there for we use alert interface of slenum web driver alert interface has four interface 
+accept ,dismiss,sendkeysand gettext 
+to handel we may right driver.switchto.alert().accecpt()/dismiss()/sendkeys()/gettext()  depending on action you want or perform
+
+2)hidden division :---this is a popup which will occcurs on the webpage .this popup will ocuur if the coustmer is withing to show some valuable through the user such as
+advertiesmate .this popup is develepet html,css and java script that the resion we can inscept this popup 
+.to handel this popup we should inspect and locate this using find element and us web element interface method 
+
+
+
+
+
+
+
+---chlid browser popup:---this is a popup which will open as secodary window .to handel this popup we must switch the driver control to that secodary window using switich to method and
+ call the window method and pass the window id of the secodary window 
+ 
+ 
+WebDriver driver = new ChromeDriver();
+		driver.manage().window().maximize();
+
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20)); 
+
+
+		driver.get("https://demoapps.qspiders.com/browser?sublist=0");
+		
+		driver.findElement(By.linkText("Open in new window")).click();
+		
+	Set<String> newbrowser = driver.getWindowHandles();
+	
+	for(String x:newbrowser) {
+		
+		driver.switchTo().window(x);
+		String current = driver.getTitle();
+	if(current.contains("new Window")) {
+		
+		driver.switchTo().frame(0);
+		
+		driver.findElement(By.id("username")).sendKeys("chandan@1");
+		driver.findElement(By.id("email")).sendKeys("chandan@1");
+		
+		driver.findElement(By.id("password")).sendKeys("chandan@1");
+		
+		
+		
+5)notification popup :---this notifiaction will occur below the adeeres bar of the browser window at the lefeft hand couner
+  this popup is given by a web page to ask the user permisiion to allow or block notifications from this webpage it will have three button close ,aloow and block 
+	 
+	 
+	 to handel this popup 	we can use robot class to click any of the three buttons we can also ignore this popup before the launching the browser using chrome options class
+
+     		
+	 ChromeOptions option = new ChromeOptions();
+	 option.addArguments("--disable-notifications");
+		
+		Robot robot = new Robot();
+		robot.keyPress(KeyEvent.VK_TAB);
+		robot.keyRelease(KeyEvent.VK_TAB);
+		
+		robot.keyPress(KeyEvent.VK_ENTER);
+		robot.keyRelease(KeyEvent.VK_ENTER);
+		
+		
+		
+  6)authotication popup :----this popup ocuur at top of the browser this pop will ask user cardeniatial in oder to aouthticate to user 
+  before aloow him/her into the website 
+  to handel this popup we make use two wase 
+  1)we can directely pass the user name and password into url 
+  ex:----htpps://username:password@www.demopage.com
+  2)to haldel we can use autoit 
+  
+  7) file upload popup :----it is a gui popup there for it can not we inscpected and libarary method are also are not there to handel 
+  popup.  if the popup has input tab and type =file then we can use send key method and file path 
+  2)if input tag and or type =file is not here we have to use autoit 
+  
+7.File Download Pop Up:- It is also a GUI level Pop up therefore we can not inspect and no library method is present to handle this pop up.By default in test Automation browser "Ask where to save each file before downloading" option is disabled there fore it might not handle this popup.Suppose we have to handle pop up then we will use robot class.
+
+8.Print Popup:- Some times we might see a Print button on the web page clicking on this button might open the print pop up i t is also a GUI level pop up there fore we will use robot class or use Autoit to handle this pop up.
+
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+

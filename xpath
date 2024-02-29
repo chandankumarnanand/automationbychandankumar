@@ -1,0 +1,81 @@
+xpath by group index -- it is aralative xpath which identify any web element using any xpath
+
+(//tagname[attribute or text])[index]
+
+ex--write an xpath to identify all links in any webpage
+//a
+write an xpath to identify the fifth link 
+(//a)[5]
+
+
+write an xpath the last link 
+(//a)[last()]
+
+write an xpath to find second last link
+(//a)[last()-1]
+
+even links
+(//a) [position() mod2=0]
+odd links
+(//a) [position() mod2!=0]
+
+
+diffrence between css selector and xpath
+
+
+css selector can we use to idefiny shaddow down element--xpath cant used
+
+css selector does not support text function---xpath will use
+
+
+css selector syntax--tagnae[attributename="atrribute value"]
+xpath synatax --//tagname[@attributename="atrribute value"]
+
+css selector can not use if atribute is not present 
+xpath can use if atribute not prsent
+
+css selector is fast but xpath is slower 
+
+
+
+diffrence b/w absoulutexpath and relative 
+
+absolute xpath starts from root tag relative xapth can start from any tag
+
+absoulte xpath is long and comlex 
+ralative is short and simple
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

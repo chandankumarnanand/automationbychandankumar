@@ -1,0 +1,53 @@
+default content method used to  switch the driver control directly  back to main wabepage from any given frame
+
+
+
+parent frame method this method is used to switch the driver control to the imediate parent frame 
+
+Q) how to handandel dropdowns or list boxes 
+1) to handel drop down first we must insepect dropdown and see wther the drop down is using select tag or not 
+
+2)if the drop down is develop using select tag then we have use select class of slenium webdriver
+
+
+dropdown has two types 1)singleselect means we can select single option at a time
+multiselect   we can select multiple option at a time 
+ to veryfy whter a dropdown a single select or multi select we have to use keys  multiple method of select class
+ 
+ how to handandel dropdowns or list boxes 
+ 
+ 
+3) if the drop down is not develop using select tag then we can 1st cheak the funcutionlaty of the drop down and use actions class method 
+
+
+
+
+************detadriventesting*******************
+
+it is a stategy we can write test script without using test data 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
